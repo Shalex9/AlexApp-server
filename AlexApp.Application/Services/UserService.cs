@@ -6,6 +6,8 @@ using System;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Text;
+using AlexApp.Domain.Filters;
+using System.Linq;
 
 namespace AlexApp.Application.Services
 {
@@ -26,6 +28,12 @@ namespace AlexApp.Application.Services
         public UserDto Get(string username)
         {
             return Mapper.Map<UserDto>(_userRepository.GetByUsername(username));
+        }
+
+        public PageInfo<UserDto> GetRange(int page, int pageSize, UserFilter filter)
+        {
+            var (items, count) = _userRepository.GetRange(page, pageSize, filter);
+            return PageInfo<UserDto>.Create(page, pageSize, items.Select(Mapper.Map<UserDto>).ToList(), count);
         }
 
         //public void Update(int id, UserUpdate update)

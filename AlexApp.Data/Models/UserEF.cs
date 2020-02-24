@@ -6,12 +6,13 @@ using System.Text;
 namespace AlexApp.Data.Models
 {
     [Table("Users")]
-    public class UserEF
+    public class UserEF : IRemovableEntity, IEntityEF
     {
         public int Id { get; set; }
         public string Name { get; set; }
         public string Title { get; set; }
         public string Password { get; set; }
         public string Email { get; set; }
+        public bool IsRemoved { get; set; }
     }
 }

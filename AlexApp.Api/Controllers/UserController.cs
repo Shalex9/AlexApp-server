@@ -1,5 +1,6 @@
 ﻿using AlexApp.Application.Dto;
 using AlexApp.Application.Services.Contracts;
+using AlexApp.Domain.Filters;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -18,11 +19,12 @@ namespace AlexApp.Api.Controllers
             _userService = userService;
         }
 
-        //[HttpGet("api/users")]
-        //public ActionResult<PageInfo<UserDto>> GetPage(int page = 1, int pageSize = 50)
-        //{
-        //    return Ok(_userService.GetPage(page, pageSize));
-        //}
+        [HttpGet]
+        [Route("api/users")]
+        public ActionResult GetRange(int page = 1, int pageSize = 50)
+        {
+            return Ok(_userService.GetRange(page, pageSize, null));
+        }
 
         [HttpGet("api/users/{id}")]
         public ActionResult<UserDto> Get(int id)
