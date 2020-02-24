@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlexApp.Api", "AlexApp.Api\AlexApp.Api.csproj", "{A212CF4D-4CD0-45CC-9285-33A265326763}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlexApp.Application", "AlexApp.Application\AlexApp.Application.csproj", "{6EE5E628-9D44-422C-A440-684006B21487}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlexApp.Domain", "AlexApp.Domain\AlexApp.Domain.csproj", "{A133DFC1-D68B-44E4-B893-1DB27000845E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlexApp.Data", "AlexApp.Data\AlexApp.Data.csproj", "{30EE23DD-0617-47EF-9403-E9F8F117BA23}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A212CF4D-4CD0-45CC-9285-33A265326763}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A212CF4D-4CD0-45CC-9285-33A265326763}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A212CF4D-4CD0-45CC-9285-33A265326763}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A212CF4D-4CD0-45CC-9285-33A265326763}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EE5E628-9D44-422C-A440-684006B21487}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EE5E628-9D44-422C-A440-684006B21487}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EE5E628-9D44-422C-A440-684006B21487}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EE5E628-9D44-422C-A440-684006B21487}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A133DFC1-D68B-44E4-B893-1DB27000845E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A133DFC1-D68B-44E4-B893-1DB27000845E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A133DFC1-D68B-44E4-B893-1DB27000845E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A133DFC1-D68B-44E4-B893-1DB27000845E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30EE23DD-0617-47EF-9403-E9F8F117BA23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30EE23DD-0617-47EF-9403-E9F8F117BA23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30EE23DD-0617-47EF-9403-E9F8F117BA23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30EE23DD-0617-47EF-9403-E9F8F117BA23}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8830B9DD-6FA7-4976-9651-E0FE5B576E9E}
+	EndGlobalSection
+EndGlobal
