@@ -4,7 +4,7 @@
     "anonymousAuthentication": true, 
     "iisExpress": {
       "applicationUrl": "http://localhost:56777",
-      "sslPort": 44323
+      "sslPort": 0
     }
   },
   "profiles": {
@@ -12,7 +12,8 @@
       "commandName": "IISExpress",
       "launchBrowser": true,
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ConnectionStrings:AlexAppDbContext": "Server=(localdb)\\mssqllocaldb;Database=alex_app;Trusted_Connection=True;"
       }
     },
     "AlexApp.Api": {
