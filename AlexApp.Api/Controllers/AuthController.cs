@@ -58,7 +58,6 @@ namespace AlexApp.Api.Controllers
             if (!_userService.UsernameFree(newUser.Username))
             {
                 return StatusCode(403);
-                //return BadRequest(new { errorText = "Логин уже используется в системе. Придумайте другой логин." });
             }
             _userService.RegisterNewUser(newUser.Username, newUser.Title, newUser.Password, newUser.Email);
             return StatusCode(200);
