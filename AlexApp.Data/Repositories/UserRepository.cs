@@ -54,5 +54,11 @@ namespace AlexApp.Data.Repositories
             var items = dbItems.Select(Mapper.Map<User>).ToList();
             return (items, count);
         }
+
+        public void RegisterNewUser(User user)
+        {
+            _set.Add(Mapper.Map<UserEF>(user));
+            _db.SaveChanges();
+        }
     }
 }

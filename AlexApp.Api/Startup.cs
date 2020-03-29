@@ -63,6 +63,12 @@ namespace AlexApp.Api
                     };
                 });
 
+            services.AddAuthentication().AddGoogle(googleOptions =>
+            {
+                googleOptions.ClientId = _config["Authentication:Google:ClientId"];
+                googleOptions.ClientSecret = _config["Authentication:Google:ClientSecret"];
+
+            });
             services.AddControllers(options =>
             {
                 var policy = new AuthorizationPolicyBuilder()

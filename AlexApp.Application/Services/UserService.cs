@@ -8,6 +8,7 @@ using System.Security.Cryptography;
 using System.Text;
 using AlexApp.Domain.Filters;
 using System.Linq;
+using AlexApp.Domain.Entities;
 
 namespace AlexApp.Application.Services
 {
@@ -65,6 +66,11 @@ namespace AlexApp.Application.Services
         //    _userRepository.Save(user);
         //}
 
+        public bool UsernameFree(string username)
+        {
+            return _userRepository.GetByUsername(username) == null ? true : false;
+        }
+
         public bool CheckUser(string username, string password)
         {
             var user = _userRepository.GetByUsername(username);
@@ -84,6 +90,13 @@ namespace AlexApp.Application.Services
         public string CreatePasswordHash(string password)
         {
             return Hash(password);
+        }
+
+        public void RegisterNewUser(string username, string title, string password, string email)
+        {
+            var passwordHash = Hash(password);
+            var newUser = User.CreateNew(username, title, passwordHash, email);
+            _userRepository.RegisterNewUser(newUser);
         }
 
 

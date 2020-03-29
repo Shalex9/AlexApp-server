@@ -11,7 +11,8 @@ namespace AlexApp.Data
     {
         public DataMappingProfile()
         {
-            CreateMap<User, UserEF>();
+            CreateMap<User, UserEF>()
+                .ForMember(u => u.Id, opts => opts.Ignore());
             CreateMap<UserEF, User>();
         }
     }

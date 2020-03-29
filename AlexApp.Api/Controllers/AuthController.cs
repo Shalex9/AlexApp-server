@@ -1,4 +1,5 @@
-﻿using AlexApp.Application.Services.Contracts;
+﻿using AlexApp.Api.Models;
+using AlexApp.Application.Services.Contracts;
 using AlexApp.Domain.Contracts;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -48,6 +49,19 @@ namespace AlexApp.Api.Controllers
 
             string jwtToken = new JwtSecurityTokenHandler().WriteToken(token);
             return Ok(jwtToken);
+        }
+
+
+        [HttpPost("/api/register")]
+        public ActionResult Register([FromBody]NewUser newUser)
+        {
+            if (!_userService.UsernameFree(newUser.Username))
+            {
+                return StatusCode(403);
+                //return BadRequest(new { errorText = "Логин уже используется в системе. Придумайте другой логин." });
+            }
+            _userService.RegisterNewUser(newUser.Username, newUser.Title, newUser.Password, newUser.Email);
+            return StatusCode(200);
         }
     }
 

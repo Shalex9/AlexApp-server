@@ -11,5 +11,6 @@ namespace AlexApp.Domain.Contracts
         User Get(int id);
         User GetByUsername(string username);
         (IEnumerable<User> items, int count) GetRange(int page, int pageSize, UserFilter filter);
+        void RegisterNewUser(User user);
     }
 }

@@ -14,5 +14,7 @@ namespace AlexApp.Application.Services.Contracts
         //void Update(int id, UserUpdate update);
         //void ChangePassword(int id, PasswordUpdate update);
         bool CheckUser(string username, string password);
+        bool UsernameFree(string username);
+        void RegisterNewUser(string username, string title, string password, string email);
     }
 }
