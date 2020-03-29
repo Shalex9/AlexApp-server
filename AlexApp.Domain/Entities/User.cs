@@ -34,7 +34,7 @@ namespace AlexApp.Domain.Entities
 
         public void ChangeTitle(string title)
         {
-            if (title.Length < 3)
+            if (title.Length < 2)
             {
                 throw new ArgumentException("Title needs at least 3 characters");
             }
